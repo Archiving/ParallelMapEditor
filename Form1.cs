@@ -17,7 +17,9 @@ namespace ParallelMapEditor
         private Bitmap[][] tileSet;
 
         public int TileSize = 0;
-        public bool MapLoaded = false;
+
+        public static int MapWidth = 0;
+        public static int MapHeight = 0;
 
         public Form1()
         {
@@ -51,7 +53,10 @@ namespace ParallelMapEditor
                 if ((stream = save.OpenFile()) != null)
                 {
                     stream.Close();
-                    MapLoaded = true;
+                    MapBox.BackColor = Color.LightGray;
+                    MapParameterDialog dialog = new MapParameterDialog();
+                    dialog.ShowDialog();
+                    MapDimensionLabel.Text = "Width: " + MapWidth + ", Height: " + MapHeight;
                 }
             }
         }

@@ -35,8 +35,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.ErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.MapBox = new System.Windows.Forms.PictureBox();
+            this.MapDimensionLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.TilesetBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MapBox)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -92,11 +95,30 @@
             // 
             this.ErrorProvider.ContainerControl = this;
             // 
+            // MapBox
+            // 
+            this.MapBox.BackColor = System.Drawing.SystemColors.Control;
+            this.MapBox.Location = new System.Drawing.Point(19, 58);
+            this.MapBox.Name = "MapBox";
+            this.MapBox.Size = new System.Drawing.Size(385, 351);
+            this.MapBox.TabIndex = 6;
+            this.MapBox.TabStop = false;
+            // 
+            // MapDimensionLabel
+            // 
+            this.MapDimensionLabel.AutoSize = true;
+            this.MapDimensionLabel.Location = new System.Drawing.Point(132, 420);
+            this.MapDimensionLabel.Name = "MapDimensionLabel";
+            this.MapDimensionLabel.Size = new System.Drawing.Size(0, 13);
+            this.MapDimensionLabel.TabIndex = 7;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.MapDimensionLabel);
+            this.Controls.Add(this.MapBox);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.TilesetBox);
@@ -106,6 +128,7 @@
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.TilesetBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MapBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -119,6 +142,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ErrorProvider ErrorProvider;
+        private System.Windows.Forms.PictureBox MapBox;
+        private System.Windows.Forms.Label MapDimensionLabel;
     }
 }
 
